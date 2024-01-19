@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+    <h1 id="title">Fitness Goal Survey Form</h1>
+    <p id="description">Will it be easy? nope. Will it be worth it? <span style="font-weight: bolder; color: rgb(255, 143, 143);">Absolutely!</span></p>
+    <form id="survey-form">
+        <div class="all-info"><div class="personal-info">
+            <label id="name-label">Name:</label>
+            <input required id="name" 
+            type="text" 
+            placeholder="Enter your name here..."/>
+        </div>
+        <div class="personal-info"><label id="email-label">Email:</label>
+            <input required id="email" 
+            type="email" 
+            placeholder="Enter your email here..."/>
+        </div>
+        <div class="personal-info">
+            <label id="number-label">Age:</label>
+            <input required id="number" 
+            type="number" placeholder="Enter your age here..." 
+            onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189" 
+            min="8" max="100"/>
+        </div>
+            <label>What is your Fitness Goal?</label>
+            <select required id="dropdown">
+                <option value="">(select one)</option>
+                <option value="1">Lose weight</option>
+                <option value="2">Gain muscle</option>
+                <option value="3">Build stamina & endurance</option>
+                <option value="4">Other...</option>
+            </select>
+        </div>
+        <div class="activity">
+            <legend>Are you physically active? If so, how active are you?</legend><br>
+            <label for="v-active"><input class="inline" name="activeness" value="1" type="radio" id="v-active" checked/> Very active (6-7 days a week)</label><br>
+            <label for="m-active"><input class="inline" name="activeness" value="2" type="radio" id="m-active"/> Moderately active (4-5 days a week)</label><br>
+            <label for="s-active"><input class="inline" name="activeness" value="3" type="radio" id="s-active"/> Slightly active (2-3 days a week)</label><br>
+            <label for="n-active"><input class="inline" name="activeness" value="4" type="radio" id="n-active"/> Not Physically active</label><br>
+        </div>
+        <div class="checks">
+            <div class="down">
+                <label id="question">What type of physical activity do you typically do? (select all that applies)</span></label><br>
+            </div>
+            <input class="inline" type="checkbox" value="cardio">
+            <label>Recreational cardio (walking, running, cycling, etc...)</label><br>
+            <input class="inline" type="checkbox" value="weights">
+            <label>Weight lifting</label><br>
+            <input class="inline" type="checkbox" value="gymnastics">
+            <label>Gymnastics</label><br>
+            <input class="inline" type="checkbox" value="martial-arts">
+            <label>Martial arts (Boxing, Karate, Muay Thai, Jiu-jitsu, etc...)</label><br>
+            <input class="inline" type="checkbox" value="sports">
+            <label>Sports (Basketball, Soccer Football, Volleyball, Tennis, etc..)</label>
+        </div>
+        <div class="text">
+            <div class="down">
+                <label>Do you suffer from any health-related issues? (optional)</label><br>
+            </div>
+            <textarea></textarea>
+            <button id="submit">Submit</button>
+        </div>
+    </form>
+    </div>
+</body>
+</html>
